@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = "http://localhost:5000/api";
 
 // Create axios instance
 const api = axios.create({
@@ -79,8 +79,8 @@ export const bachatGatAPI = {
   getAll: () =>
     api.get('/bachatgat'),
   
-  getAvailable: () =>
-    publicApi.get('/bachatgat/available'),
+getAvailable: () => 
+  api.get("/bachatgat/available"),
   
   getById: (id: string) =>
     api.get(`/bachatgat/${id}`),

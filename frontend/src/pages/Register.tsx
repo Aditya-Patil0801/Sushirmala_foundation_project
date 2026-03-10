@@ -56,26 +56,39 @@ const Register = () => {
   const { toast } = useToast();
 
   // Fetch available Bachat Gats
-  useEffect(() => {
-    const fetchBachatGats = async () => {
-      try {
-        setLoadingGats(true);
-        const response = await bachatGatAPI.getAvailable();
-        setBachatGats(response.data);
-      } catch (error) {
-        console.error('Error fetching Bachat Gats:', error);
-        toast({
-          title: "Error",
-          description: "Failed to load Bachat Gats. Please try again.",
-          variant: "destructive",
-        });
-      } finally {
-        setLoadingGats(false);
-      }
-    };
+useEffect(() => {
+  const fetchBachatGats = async () => {
+    try {
+      setLoadingGats(true);
 
-    fetchBachatGats();
-  }, [toast]);
+      const response = await bachatGatAPI.getAvailable();
+
+      // Backend response structure:
+      // { success: true, data: [...] }
+
+      if (response.data && response.data.success) {
+        setBachatGats(response.data.data);
+      } else {
+        setBachatGats([]);
+      }
+
+    } catch (error) {
+      console.error("Error fetching Bachat Gats:", error);
+
+      toast({
+        title: "Error",
+        description: "Failed to load Bachat Gats. Please try again.",
+        variant: "destructive",
+      });
+
+      setBachatGats([]);
+    } finally {
+      setLoadingGats(false);
+    }
+  };
+
+  fetchBachatGats();
+}, [toast]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -224,7 +237,7 @@ const Register = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="aadharNumber">Aadhar Number</Label>
+                <Label htmlFor="aadharNumber">{t('register.aadhar')}</Label>
                 <div className="relative">
                   <FileText className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
@@ -274,7 +287,7 @@ const Register = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="age">Age</Label>
+                <Label htmlFor="age">{t('register.age')}</Label>
                 <div className="relative">
                   <Calendar className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
@@ -291,7 +304,7 @@ const Register = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="occupation">{t('occupation')}</Label>
+                <Label htmlFor="occupation">{t('register.occupation')}</Label>
                 <div className="relative">
                   <Briefcase className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
@@ -307,7 +320,7 @@ const Register = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="monthlyIncome">Monthly Income (₹)</Label>
+                <Label htmlFor="monthlyIncome">{t('register.monthlyIncome')}</Label>
                 <div className="relative">
                   <IndianRupee className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
