@@ -158,7 +158,9 @@ const translations: Record<string, Record<string, string>> = {
     'register.name': 'Full Name',
     'register.email': 'Email Address',
     'register.password': 'Password',
+    'register.confirm': 'Confirm Password',
     'register.phone': 'Phone Number',
+    'register.addressDetails': 'Address Details',
     'register.village': 'Village',
     'register.district': 'District',
     'register.state': 'State',
@@ -179,6 +181,7 @@ const translations: Record<string, Record<string, string>> = {
     'register.haveaccount': 'Already have an account?',
     'register.login': 'Login here',
     'register.terms': 'I agree to the Terms of Service and Privacy Policy',
+    'register.officerNote': 'Note: Officer positions require approval from existing group members.',
     
     // Dashboard
     'dashboard.welcome': 'Welcome',
@@ -217,6 +220,14 @@ const translations: Record<string, Record<string, string>> = {
     'common.close': 'Close',
     'common.submit': 'Submit',
     'common.back': 'Back',
+    
+    // Seed Data translations
+    'Sushir Jyot': 'Sushir Jyot',
+    'Sushir Umang': 'Sushir Umang',
+    'Sushir Udan': 'Sushir Udan',
+    'Village A': 'Village A',
+    'Village B': 'Village B',
+    'Village C': 'Village C',
   },
   hi: {
     // Home
@@ -366,7 +377,9 @@ const translations: Record<string, Record<string, string>> = {
     'register.name': 'पूरा नाम',
     'register.email': 'ईमेल पता',
     'register.password': 'पासवर्ड',
+    'register.confirm': 'पासवर्ड की पुष्टि करें',
     'register.phone': 'फ़ोन नंबर',
+    'register.addressDetails': 'पता विवरण',
     'register.village': 'गाँव',
     'register.district': 'जिला',
     'register.state': 'राज्य',
@@ -387,6 +400,7 @@ const translations: Record<string, Record<string, string>> = {
     'register.haveaccount': 'पहले से खाता है?',
     'register.login': 'यहाँ लॉगिन करें',
     'register.terms': 'मैं सेवा की शर्तों और गोपनीयता नीति से सहमत हूँ',
+    'register.officerNote': 'नोट: अधिकारी पदों के लिए मौजूदा समूह सदस्यों की स्वीकृति की आवश्यकता है।',
     
     // Dashboard
     'dashboard.welcome': 'स्वागत है',
@@ -425,6 +439,14 @@ const translations: Record<string, Record<string, string>> = {
     'common.close': 'बंद करें',
     'common.submit': 'जमा करें',
     'common.back': 'वापस',
+    
+    // Seed Data translations
+    'Sushir Jyot': 'सुशीर ज्योत',
+    'Sushir Umang': 'सुशीर उमंग',
+    'Sushir Udan': 'सुशीर उड़ान',
+    'Village A': 'गाँव अ',
+    'Village B': 'गाँव ब',
+    'Village C': 'गाँव क',
   },
   mr: {
     // Home
@@ -473,37 +495,37 @@ const translations: Record<string, Record<string, string>> = {
     'home.stats.groups': 'समूह',
     
     // Gats section
-    'gats.title': 'हमारे बचत गट',
-    'gats.desc': 'हमारे नेटवर्क में महिलाओं के आत्म-सहायता समूहों की खोज करें',
-    'gats.view': 'सभी समूह देखें',
-    'gats.enquire': 'शामिल होने के लिए पूछताछ करें',
+    'gats.title': 'आमचे बचत गट',
+    'gats.desc': 'आमच्या नेटवर्कमधील महिलांच्या बचत गटांचा शोध घ्या',
+    'gats.view': 'सर्व गट पहा',
+    'gats.enquire': 'सामील होण्यासाठी चौकशी करा',
     
     // Features section
-    'features.community': 'सामुदायिक समर्थन',
+    'features.community': 'समुदाय समर्थन',
     'features.community.desc': 'तुमच्या समुदायातील इतर महिलांशी कनेक्ट करा',
-    'features.investment': 'चालाक निवेश',
-    'features.investment.desc': 'व्यक्तिगत और व्यापारी आवश्यकताओं के लिए कम व्याजाच्या कर्जासाठी अर्ज करा',
+    'features.investment': 'स्मार्ट गुंतवणूक',
+    'features.investment.desc': 'वैयक्तिक आणि व्यावसायिक गरजांसाठी कमी व्याजाच्या कर्जासाठी अर्ज करा',
     'features.secure': 'सुरक्षित नोंदी',
-    'features.secure.desc': 'पारदर्शी आणि सुरक्षित आर्थिक नोंदी करा',
-    'features.empowerment': 'महिलाओं की सशक्तिकरण',
-    'features.empowerment.desc': 'वित्तीय ज्ञान आणि नेतृत्व कौशल बनाएं',
+    'features.secure.desc': 'पारदर्शक आणि सुरक्षित आर्थिक नोंदी ठेवा',
+    'features.empowerment': 'महिला सक्षमीकरण',
+    'features.empowerment.desc': 'आर्थिक साक्षरता आणि नेतृत्व कौशल्ये विकसित करा',
     
     // Benefits section
-    'benefits.title': 'हमारे समुदाय में शामिल होने क्यों?',
-    'benefits.desc': 'हमारे बचत गटात सामील होण्यासाठी महिलाओं के वित्तीय सशक्तिकरण के लिए कई लाभ प्राप्त होते हैं',
+    'benefits.title': 'आमच्या समुदायात का सामील व्हावे?',
+    'benefits.desc': 'आमच्या बचत गटात सामील होण्यामुळे महिलांच्या आर्थिक सक्षमीकरणासाठी अनेक फायदे मिळतात',
     'benefits.zeroFees': 'शून्य सदस्यता शुल्क',
-    'benefits.flexible': 'नियमित योगदान राशि',
-    'benefits.emergency': 'आपातकालिक ऋण सुविधा',
-    'benefits.literacy': 'वित्तीय ज्ञान कार्यक्रम',
-    'benefits.government': 'राज्य सरकारी योजनाओं का पहुंच',
-    'benefits.community': 'मजबूत सामुदायिक समर्थन',
+    'benefits.flexible': 'लवचिक योगदान रक्कम',
+    'benefits.emergency': 'तातडीची कर्ज सुविधा',
+    'benefits.literacy': 'आर्थिक साक्षरता कार्यक्रम',
+    'benefits.government': 'सरकारी योजनांमध्ये प्रवेश',
+    'benefits.community': 'मजबूत समुदाय समर्थन',
     
     // Dashboard section
-    'dashboard.join': 'हमारे समुदाय में शामिल हों',
-    'dashboard.join.desc': 'वित्तीय स्वातंत्र्य की यात्रा शुरू करें',
-    'dashboard.community': 'एक सामुदायिक समूह में शामिल हों',
-    'dashboard.savings': 'नियमित बचत शुरू करें',
-    'dashboard.skill': 'वित्तीय कौशल विकास करें',
+    'dashboard.join': 'आमच्या समुदायात सामील व्हा',
+    'dashboard.join.desc': 'आर्थिक स्वातंत्र्याचा प्रवास सुरू करा',
+    'dashboard.community': 'समुदाय गटात सामील व्हा',
+    'dashboard.savings': 'नियमित बचत सुरू करा',
+    'dashboard.skill': 'आर्थिक कौशल्ये विकसित करा',
     
     // Footer
     'footer.about': 'आमच्याबद्दल',
@@ -575,12 +597,14 @@ const translations: Record<string, Record<string, string>> = {
 'register.name': 'पूर्ण नाव',
 'register.email': 'ईमेल पत्ता',
 'register.password': 'पासवर्ड',
+'register.confirm': 'पासवर्डची पुष्टी करा',
 'register.phone': 'फोन नंबर',
+'register.addressDetails': 'पत्ता तपशील',
 
 'register.aadhar': 'आधार क्रमांक',
 'register.age': 'वय',
 'register.occupation': 'व्यवसाय',
-'register.monthlyIncome': 'मासिक उत्पन्न (₹)',
+'register.income': 'मासिक उत्पन्न (₹)',
 
 'register.village': 'गाव',
 'register.district': 'जिल्हा',
@@ -602,6 +626,7 @@ const translations: Record<string, Record<string, string>> = {
 'register.haveaccount': 'आधीच खाते आहे?',
 'register.login': 'येथे लॉगिन करा',
 'register.terms': 'मी सेवेच्या अटी आणि गोपनीयता धोरणाशी सहमत आहे',  
+'register.officerNote': 'टीप: अधिकारी पदांसाठी विद्यमान गट सदस्यांची मान्यता आवश्यक आहे.',
     
     // Dashboard
     'dashboard.welcome': 'स्वागत आहे',
@@ -640,6 +665,14 @@ const translations: Record<string, Record<string, string>> = {
     'common.close': 'बंद करा',
     'common.submit': 'सादर करा',
     'common.back': 'मागे',
+    
+    // Seed Data translations
+    'Sushir Jyot': 'सुशीर ज्योत',
+    'Sushir Umang': 'सुशीर उमंग',
+    'Sushir Udan': 'सुशीर उडान',
+    'Village A': 'गाव अ',
+    'Village B': 'गाव ब',
+    'Village C': 'गाव क',
   }
 };
 

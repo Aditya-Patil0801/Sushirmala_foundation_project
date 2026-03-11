@@ -196,7 +196,7 @@ useEffect(() => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Full Name"
+                    placeholder={t('register.name')}
                     className="pl-10"
                     required
                   />
@@ -312,7 +312,7 @@ useEffect(() => {
                     name="occupation"
                     value={formData.occupation}
                     onChange={handleInputChange}
-                    placeholder="Occupation"
+                    placeholder={t('register.occupation')}
                     className="pl-10"
                     required
                   />
@@ -320,7 +320,7 @@ useEffect(() => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="monthlyIncome">{t('register.monthlyIncome')}</Label>
+                <Label htmlFor="monthlyIncome">{t('register.income')}</Label>
                 <div className="relative">
                   <IndianRupee className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
@@ -341,7 +341,7 @@ useEffect(() => {
                 <Label htmlFor="gatId">
                   <div className="flex items-center gap-2">
                     <Users className="h-4 w-4" />
-                    Select Bachat Gat
+                    {t('register.bachatGat')}
                   </div>
                 </Label>
                 <div className="relative">
@@ -352,12 +352,12 @@ useEffect(() => {
                     disabled={loadingGats}
                   >
                     <SelectTrigger className="pl-10">
-                      <SelectValue placeholder={loadingGats ? "Loading..." : "Select a Bachat Gat"} />
+                      <SelectValue placeholder={loadingGats ? t('common.loading') : t('register.selectBachatGat')} />
                     </SelectTrigger>
                     <SelectContent>
                       {bachatGats.map((gat) => (
                         <SelectItem key={gat._id} value={gat._id}>
-                          {gat.name} ({gat.location.village})
+                          {t(gat.name)} ({t(gat.location.village)})
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -375,7 +375,7 @@ useEffect(() => {
                 <Label htmlFor="role">
                   <div className="flex items-center gap-2">
                     <UserCircle className="h-4 w-4" />
-                    Select Role
+                    {t('register.role')}
                   </div>
                 </Label>
                 <div className="relative">
@@ -385,29 +385,29 @@ useEffect(() => {
                     onValueChange={(value) => handleSelectChange('role', value)}
                   >
                     <SelectTrigger className="pl-10">
-                      <SelectValue placeholder="Select a role" />
+                      <SelectValue placeholder={t('register.selectRole')} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="member">Member</SelectItem>
-                      <SelectItem value="president">President</SelectItem>
-                      <SelectItem value="secretary">Secretary</SelectItem>
-                      <SelectItem value="treasurer">Treasurer</SelectItem>
+                      <SelectItem value="member">{t('register.member')}</SelectItem>
+                      <SelectItem value="president">{t('register.president')}</SelectItem>
+                      <SelectItem value="secretary">{t('register.secretary')}</SelectItem>
+                      <SelectItem value="treasurer">{t('register.treasurer')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 {formData.role !== 'member' && (
                   <p className="text-xs text-muted-foreground">
-                    Note: Officer positions require approval from existing group members.
+                    {t('register.officerNote')}
                   </p>
                 )}
               </div>
             </div>
             
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-prosperity">Address Details</h3>
+              <h3 className="text-lg font-semibold text-prosperity">{t('register.addressDetails')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="address.village">Village</Label>
+                  <Label htmlFor="address.village">{t('register.village')}</Label>
                   <div className="relative">
                     <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                     <Input
@@ -415,7 +415,7 @@ useEffect(() => {
                       name="address.village"
                       value={formData.address.village}
                       onChange={handleInputChange}
-                      placeholder="Village Name"
+                      placeholder={t('register.village')}
                       className="pl-10"
                       required
                     />
@@ -423,37 +423,37 @@ useEffect(() => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="address.district">District</Label>
+                  <Label htmlFor="address.district">{t('register.district')}</Label>
                   <Input
                     id="address.district"
                     name="address.district"
                     value={formData.address.district}
                     onChange={handleInputChange}
-                    placeholder="District Name"
+                    placeholder={t('register.district')}
                     required
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="address.state">State</Label>
+                  <Label htmlFor="address.state">{t('register.state')}</Label>
                   <Input
                     id="address.state"
                     name="address.state"
                     value={formData.address.state}
                     onChange={handleInputChange}
-                    placeholder="State Name"
+                    placeholder={t('register.state')}
                     required
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="address.pincode">Pincode</Label>
+                  <Label htmlFor="address.pincode">{t('register.pincode')}</Label>
                   <Input
                     id="address.pincode"
                     name="address.pincode"
                     value={formData.address.pincode}
                     onChange={handleInputChange}
-                    placeholder="400001"
+                    placeholder={t('register.pincode')}
                     required
                   />
                 </div>
@@ -473,7 +473,7 @@ useEffect(() => {
             <p className="text-center text-sm text-muted-foreground">
               {t('register.haveaccount')}{' '}
               <Link to="/login" className="text-prosperity hover:underline">
-                {t('register.signin')}
+                {t('register.login')}
               </Link>
             </p>
           </CardFooter>
