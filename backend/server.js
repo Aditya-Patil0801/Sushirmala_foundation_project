@@ -21,7 +21,7 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:8080',
     'http://localhost:8081',
-    'https://sushirmala-foundation-project.vercel.app/'
+    'https://sushirmala-foundation-project.vercel.app'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
