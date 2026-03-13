@@ -15,12 +15,13 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://your-production-domain.com']
+    ? ['https://sushirmala-foundation-project.vercel.app/']
     : [
     'http://localhost:3000',
     'http://localhost:5173',
     'http://localhost:8080',
-    'http://localhost:8081'
+    'http://localhost:8081',
+    'https://sushirmala-foundation-project.vercel.app/'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
